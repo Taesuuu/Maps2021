@@ -4062,7 +4062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035f13a953e3e4570902d1aa76c8e14c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentToDebug: {fileID: 0}
+  agentToDebug: {fileID: 1573664674}
 --- !u!120 &1573664676
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -4910,7 +4910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035f13a953e3e4570902d1aa76c8e14c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentToDebug: {fileID: 0}
+  agentToDebug: {fileID: 1788415222}
 --- !u!120 &1788415229
 LineRenderer:
   m_ObjectHideFlags: 0
