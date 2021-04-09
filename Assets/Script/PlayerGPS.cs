@@ -82,6 +82,16 @@ public class PlayerGPS : MonoBehaviour
     {
         f_Lat = (current_Lat - 37.48747) * 100000;
         f_Long = (current_Lat - 126.81980) * 100000;
+       
+        if(f_Lat < 0)
+        {
+            f_Lat = f_Lat * (-1); 
+        }
+        if (f_Long < 0)
+        {
+            f_Long = f_Long * (-1);
+        }
+
 
         player.transform.position = new Vector3((float)f_Lat, 0, (float)f_Long);
     }
