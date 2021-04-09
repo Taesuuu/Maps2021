@@ -81,10 +81,16 @@ public class PlayerGPS : MonoBehaviour
 
     public void Map()
     {
+        // 학교 정문 기준 
         f_Lat = (float)((current_Lat - 37.48747) * 100000);
         f_Long = (float)(current_Long - 126.81980) * 100000;
-       
-        if(f_Lat < 0)
+    
+        // 과천 이마트 기준
+    //    f_Lat = (float)((current_Lat - 37.42645) * 10000); 
+    //    f_Long = (float)(current_Long - 126.99186) * 10000;
+
+
+        if (f_Lat < 0)
         {
             f_Lat = f_Lat * (-1); 
         }
