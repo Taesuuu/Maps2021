@@ -81,7 +81,7 @@ public class PlayerGPS : MonoBehaviour
     public void Map()
     {
         f_Lat = (current_Lat - 37.48747) * 100000;
-        f_Long = (current_Lat - 126.81980) * 100000;
+        f_Long = (current_Long - 126.81980) * 100000;
        
         if(f_Lat < 0)
         {
