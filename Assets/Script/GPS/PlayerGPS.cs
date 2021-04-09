@@ -1,15 +1,16 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerGPS : MonoBehaviour
 {
 
-    public static double first_Lat; //최초 위도
-    public static double first_Long; //최초 경도
-    public static double current_Lat; //현재 위도
-    public static double current_Long; //현재 경도
-    public static double f_Lat; //비율 경도
-    public static double f_Long; //비율 경도
+    public static float first_Lat; //최초 위도
+    public static float first_Long; //최초 경도
+    public static float current_Lat; //현재 위도
+    public static float current_Long; //현재 경도
+    public static float f_Lat; //비율 경도
+    public static float f_Long; //비율 경도
     
     public GameObject player; // 플레이어 
 
@@ -63,16 +64,16 @@ public class PlayerGPS : MonoBehaviour
         {
             //접근 허가됨, 최초 위치 정보 받아오기
             location = Input.location.lastData;
-            first_Lat = location.latitude * 1.0d;
-            first_Long = location.longitude * 1.0d;
+            first_Lat = location.latitude * 1.0f;
+            first_Long = location.longitude * 1.0f;
             gpsStarted = true;
 
             //현재 위치 갱신
             while (gpsStarted)
             {
                 location = Input.location.lastData;
-                current_Lat = location.latitude * 1.0d;
-                current_Long = location.longitude * 1.0d;
+                current_Lat = location.latitude * 1.0f;
+                current_Long = location.longitude * 1.0f;
                 yield return second;
             }
         }
@@ -80,8 +81,8 @@ public class PlayerGPS : MonoBehaviour
 
     public void Map()
     {
-        f_Lat = (current_Lat - 37.48747) * 100000;
-        f_Long = (current_Long - 126.81980) * 100000;
+        f_Lat = (float)((current_Lat - 37.48747) * 100000);
+        f_Long = (float)(current_Long - 126.81980) * 100000;
        
         if(f_Lat < 0)
         {
@@ -92,9 +93,15 @@ public class PlayerGPS : MonoBehaviour
             f_Long = f_Long * (-1);
         }
 
-
-        player.transform.position = new Vector3((float)f_Lat, 0, (float)f_Long);
     }
+
+    void Update()
+    {
+    //    this.transform.position = new Vector3(10, 0, 10);
+        this.transform.position = new Vector3(f_Lat, 0, f_Long);
+
+    }
+
     //위치 서비스 종료
     public static void StopGPS()
     {
