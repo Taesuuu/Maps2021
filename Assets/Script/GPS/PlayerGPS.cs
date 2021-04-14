@@ -9,12 +9,12 @@ public class PlayerGPS : MonoBehaviour
     public Text xText;
     public Text yText;
 
-    public static float first_Lat; //???? ????
-    public static float first_Long; //???? ????
-    public static float current_Lat; //???? ????
-    public static float current_Long; //???? ????
-    public static float f_Lat; //???? ????
-    public static float f_Long; //???? ????
+    public static float first_Lat; // 최초 위도
+    public static float first_Long; // 최초 경도
+    public static float current_Lat; // 현재 위도 
+    public static float current_Long; // 현재 경도 
+    public static float f_Lat; // 비율적용 위도 
+    public static float f_Long; // 비율적용 경도 
     
     public GameObject player; // ???????? 
 
@@ -31,18 +31,18 @@ public class PlayerGPS : MonoBehaviour
 
     IEnumerator Start()
     {
-        // ?????? GPS ?????????? ???? ????
+        // 유저가 GPS 사용중인지 최초 체크
         if (!Input.location.isEnabledByUser)
         {
             Debug.Log("GPS is not enabled");
             yield break;
         }
 
-        //GPS ?????? ????
+        //GPS 서비스 시작 
         Input.location.Start();
         Debug.Log("Awaiting initialization");
 
-        //???????? ?? ???? ????
+        // 활성화될 때 까지 대기 
         int maxWait = 20;
         while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
         {
@@ -50,14 +50,14 @@ public class PlayerGPS : MonoBehaviour
             maxWait -= 1;
         }
 
-        //20?? ???????? ?????? ????
+        //20초 지날경우 활성화 중단
         if (maxWait < 1)
         {
             Debug.Log("Timed out");
             yield break;
         }
 
-        //???? ????
+        //연결 실패
         if (Input.location.status == LocationServiceStatus.Failed)
         {
             Debug.Log("Unable to determine device location");
@@ -66,13 +66,13 @@ public class PlayerGPS : MonoBehaviour
         }
         else
         {
-            //???? ??????, ???? ???? ???? ????????
+            //접근 허가됨, 최초 위치 정보 받아오기
             location = Input.location.lastData;
             first_Lat = location.latitude * 1.0f;
             first_Long = location.longitude * 1.0f;
             gpsStarted = true;
 
-            //???? ???? ????
+            //현재 위치 갱신
             while (gpsStarted)
             {
                 location = Input.location.lastData;
@@ -114,7 +114,7 @@ public class PlayerGPS : MonoBehaviour
 
     }
 
-    //???? ?????? ????
+    // 위치 서비스 종료
     public static void StopGPS()
     {
         if (Input.location.isEnabledByUser)
