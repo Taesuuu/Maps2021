@@ -1,11 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerGPS : MonoBehaviour
 {
 
+<<<<<<< HEAD:Assets/Script/GPS/PlayerGPS.cs
     public Text xText;
     public Text yText;
 
@@ -15,6 +15,14 @@ public class PlayerGPS : MonoBehaviour
     public static float current_Long; //???? ????
     public static float f_Lat; //???? ????
     public static float f_Long; //???? ????
+=======
+    public static double first_Lat; //ÃÖÃÊ À§µµ
+    public static double first_Long; //ÃÖÃÊ °æµµ
+    public static double current_Lat; //ÇöÀç À§µµ
+    public static double current_Long; //ÇöÀç °æµµ
+    public static double f_Lat; //ºñÀ² °æµµ
+    public static double f_Long; //ºñÀ² °æµµ
+>>>>>>> parent of da9c871 (Player GPS êµ¬í˜„ ì„±ê³µ ã…Ž):Assets/Script/PlayerGPS.cs
     
     public GameObject player; // ???????? 
 
@@ -68,16 +76,16 @@ public class PlayerGPS : MonoBehaviour
         {
             //???? ??????, ???? ???? ???? ????????
             location = Input.location.lastData;
-            first_Lat = location.latitude * 1.0f;
-            first_Long = location.longitude * 1.0f;
+            first_Lat = location.latitude * 1.0d;
+            first_Long = location.longitude * 1.0d;
             gpsStarted = true;
 
             //???? ???? ????
             while (gpsStarted)
             {
                 location = Input.location.lastData;
-                current_Lat = location.latitude * 1.0f;
-                current_Long = location.longitude * 1.0f;
+                current_Lat = location.latitude * 1.0d;
+                current_Long = location.longitude * 1.0d;
                 yield return second;
             }
         }
@@ -85,6 +93,7 @@ public class PlayerGPS : MonoBehaviour
 
     public void Map()
     {
+<<<<<<< HEAD:Assets/Script/GPS/PlayerGPS.cs
         // ???? ???? ???? 
         f_Lat = (float)((current_Lat - 37.48747) * 100000);
         f_Long = (float)(current_Long - 126.81980) * 100000;
@@ -95,6 +104,12 @@ public class PlayerGPS : MonoBehaviour
 
 
         if (f_Lat < 0)
+=======
+        f_Lat = (current_Lat - 37.48747) * 100000;
+        f_Long = (current_Long - 126.81980) * 100000;
+       
+        if(f_Lat < 0)
+>>>>>>> parent of da9c871 (Player GPS êµ¬í˜„ ì„±ê³µ ã…Ž):Assets/Script/PlayerGPS.cs
         {
             f_Lat = f_Lat * (-1); 
         }
@@ -103,6 +118,7 @@ public class PlayerGPS : MonoBehaviour
             f_Long = f_Long * (-1);
         }
 
+<<<<<<< HEAD:Assets/Script/GPS/PlayerGPS.cs
     }
 
     void Update()
@@ -111,10 +127,17 @@ public class PlayerGPS : MonoBehaviour
         this.transform.position = new Vector3(f_Lat, 0, f_Long);
         xText.text = "X : " + f_Lat.ToString();
         yText.text = "Y : " + f_Long.ToString();
+=======
+>>>>>>> parent of da9c871 (Player GPS êµ¬í˜„ ì„±ê³µ ã…Ž):Assets/Script/PlayerGPS.cs
 
+        player.transform.position = new Vector3((float)f_Lat, 0, (float)f_Long);
     }
+<<<<<<< HEAD:Assets/Script/GPS/PlayerGPS.cs
 
     //???? ?????? ????
+=======
+    //À§Ä¡ ¼­ºñ½º Á¾·á
+>>>>>>> parent of da9c871 (Player GPS êµ¬í˜„ ì„±ê³µ ã…Ž):Assets/Script/PlayerGPS.cs
     public static void StopGPS()
     {
         if (Input.location.isEnabledByUser)
