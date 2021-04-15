@@ -21,7 +21,7 @@ public class PlayerGPSTest : MonoBehaviour
     public Text text_FLat; // 비율적용 위도
     public Text text_FLong; // 비율적용 경도 
 
-    public GameObject Player;
+ //   public GameObject Player;
    // public Text text_refresh;
 
     // Use this for initialization
@@ -76,21 +76,22 @@ public class PlayerGPSTest : MonoBehaviour
     {
         f_Lat = (current_Lat - 37.48747) * 100000;
         f_Long = (current_Long - 126.81980) * 100000;
-        
+
         // 음수 -> 양수 
-        if (f_Lat < 0)
-        {
-            f_Lat = f_Lat * (-1);
-        }
+        /*       if (f_Lat < 0)
+               {
+                   f_Lat = f_Lat * (-1);
+               }
 
-        if (f_Long < 0)
-        {
-            f_Long = f_Long * (-1);
-        }
+               if (f_Long < 0)
+               {
+                   f_Long = f_Long * (-1);
+               }
+        */
+        //    Player.transform.position = new Vector3((float)f_Lat, 0, (float)f_Long);
+        text_FLong.text = "비율적용 경도 " + (current_Lat - 37.48747).ToString();//경도 값을 받아, 텍스트에 출력합니다.
 
-        Player.transform.position = new Vector3((float)f_Lat, 0, (float)f_Long);
-
-        text_FLat.text = "위도 " + f_Lat.ToString();//위도 값을 받아,텍스트에 출력합니다.
-        text_FLong.text = "경도 " + f_Long.ToString();//경도 값을 받아, 텍스트에 출력합니다.
+        text_FLat.text = "비율적용 위도 " + f_Lat.ToString();//위도 값을 받아,텍스트에 출력합니다.
+//        text_FLong.text = "비율적용 경도 " + f_Long.ToString();//경도 값을 받아, 텍스트에 출력합니다.
     }
 }
