@@ -203,6 +203,7 @@ public class menuscript : MonoBehaviour
         }
         lastmenu.SetActive(true);
 
+      
 
         if (onechose == 7 && twochose == 1)
         {
@@ -213,7 +214,7 @@ public class menuscript : MonoBehaviour
         }
         if (onechose == 7 && twochose == 2)
         {
-            for (int i = 0; i < 12; i++)
+            for (int i = 0; i < 13; i++)
             {
                 classroom[i].SetActive(true);
             }
@@ -247,7 +248,7 @@ public class menuscript : MonoBehaviour
         }
         if (onechose == 7 && twochose == 3)
         {
-            for (int i = 0; i < 12; i++)
+            for (int i = 0; i < 13; i++)
             {
                 classroom[i].SetActive(true);
             }
