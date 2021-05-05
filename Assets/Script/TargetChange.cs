@@ -139,6 +139,108 @@ public class TargetChange : MonoBehaviour
             case 5212:
                 this.transform.position = new Vector3(-13, 0, -71);
                 break;
+            case 5301:
+                this.transform.position = new Vector3(11, 0, 61);
+                break;
+            case 5302:
+                this.transform.position = new Vector3(11, 0, 52);
+                break;
+            case 5303:
+                this.transform.position = new Vector3(11, 0, 43);
+                break;
+            case 5304:
+                this.transform.position = new Vector3(11, 0, 32);
+                break;
+            case 5305:
+                this.transform.position = new Vector3(11, 0, 22);
+                break;
+            case 5306:
+                this.transform.position = new Vector3(11, 0, 14);
+                break;
+            case 5307:
+                this.transform.position = new Vector3(11, 0, 3);
+                break;
+            case 5308:
+                this.transform.position = new Vector3(11, 0, -6);
+                break;
+            case 5309:
+                this.transform.position = new Vector3(11, 0, -16);
+                break;
+            case 5310:
+                this.transform.position = new Vector3(11, 0, -26);
+                break;
+            case 5311:
+                this.transform.position = new Vector3(11, 0, -35);
+                break;
+            case 5312:
+                this.transform.position = new Vector3(11, 0, -44);
+                break;
+            case 5313:
+                this.transform.position = new Vector3(11, 0, -66);
+                break;
+            case 5314:
+                this.transform.position = new Vector3(-13, 0, 49);
+                break;
+            case 5315:
+                this.transform.position = new Vector3(-13, 0, 36);
+                break;
+            case 5321:
+                this.transform.position = new Vector3(-23, 0, -72);
+                break;
+            case 5322:
+                this.transform.position = new Vector3(-41, 0, -72);
+                break;
+            case 5401:
+                this.transform.position = new Vector3(12, 0, 63);
+                break;
+            case 5402:
+                this.transform.position = new Vector3(12, 0, 52);
+                break;
+            case 5403:
+                this.transform.position = new Vector3(12, 0, 43);
+                break;
+            case 5404:
+                this.transform.position = new Vector3(12, 0, 31);
+                break;
+            case 5405:
+                this.transform.position = new Vector3(12, 0, 19);
+                break;
+            case 5406:
+                this.transform.position = new Vector3(12, 0, 2);
+                break;
+            case 5407:
+                this.transform.position = new Vector3(12, 0, -27);
+                break;
+            case 5408:
+                this.transform.position = new Vector3(12, 0, -51);
+                break;
+            case 5409:
+                this.transform.position = new Vector3(12, 0, -64);
+                break;
+            case 5410:
+                this.transform.position = new Vector3(-12, 0, 48);
+                break;
+            case 5411:
+                this.transform.position = new Vector3(-12, 0, 36);
+                break;
+            case 5421:
+                this.transform.position = new Vector3(-35, 0, -73);
+                break;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             default:
