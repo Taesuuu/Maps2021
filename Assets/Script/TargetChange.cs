@@ -6,20 +6,31 @@ using UnityEngine.UI;
 public class TargetChange : MonoBehaviour
 {
 
-    public int getClassRoom;
+    public static int getClassRoom;
+    public static string getco;
     
 
 
     void Start()
     {
-       //DropdownClassRoom dropdownClassRoom = GameObject.Find("TextClassRoom").GetComponent<DropdownClassRoom>();
+        //DropdownClassRoom dropdownClassRoom = GameObject.Find("TextClassRoom").GetComponent<DropdownClassRoom>();
 
         //getClassRoom = dropdownClassRoom.getValue;
 
-        getClassRoom = IndexNum.indexsNum.numIndex;
-
+        //getClassRoom = IndexNum.indexsNum.numIndex;
+        Debug.Log(getClassRoom);
+        Debug.Log(getco);
         switch (getClassRoom)
         {
+            //7-3F
+            case 7301:
+                this.transform.position = new Vector3(13, 0, 32);
+                break;
+            case 7302:
+                this.transform.position = new Vector3(13, 0, 25);
+                break;
+
+            // 7-2F
             case 7201:
                 this.transform.position = new Vector3(-30, 14, 1);
                 break;
@@ -70,7 +81,7 @@ public class TargetChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(getClassRoom);
+        
         
     }
 
