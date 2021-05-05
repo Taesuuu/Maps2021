@@ -101,6 +101,7 @@ public class PlayerGPS : MonoBehaviour
             Input.location.Stop();
         }
     }
+    /*
     private void Update()
     {
         for(int i = 0;i < 20; i++)
@@ -133,4 +134,5 @@ public class PlayerGPS : MonoBehaviour
         Google_P.text = "Lat : " + Sum_Lat.ToString() + ", Long : " + Sum_Long.ToString() + "c Lat :" + current_Lat.ToString() + "c Long :" + current_Long.ToString();
         Unity_p.text = "Unity Lat : " + YH_Lat.ToString() + ", Unity Long : " + YH_Long.ToString();
     }
+    */
 }

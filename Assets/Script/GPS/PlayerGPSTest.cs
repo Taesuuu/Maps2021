@@ -6,7 +6,7 @@ using System;
 public class PlayerGPSTest : MonoBehaviour
 {
 
-    bool gpsInit = false;
+    static bool gpsInit = false;
     LocationInfo currentGPSPosition; // 위치 받아오기 
     int gps_connect = 0;
    
@@ -16,10 +16,25 @@ public class PlayerGPSTest : MonoBehaviour
     public static double f_Lat; //비율 경도
     public static double f_Long; //비율 경도
 
-    public Text text_latitude; // 위도
-    public Text text_longitude; // 경도 
-    public Text text_FLat; // 비율적용 위도
-    public Text text_FLong; // 비율적용 경도 
+    public static double[] A_Lat = new double[20]; // 위도 배열
+    public static double[] A_Long = new double[20]; // 경도 배열 
+    public static double Sum_Lat = 0; // 위도 합 
+    public static double Sum_Long = 0; // 경도 합
+
+    public static double YH_Lat = 0; // unity상 위도 (37.xxx)
+    public static double YH_Long = 0; // unity상 경도 (126.xxx)
+    public static double YH_Lat_i = 0; // 몫
+    public static double YH_Lat_d = 0; // 나머지
+    public static double YH_Long_i = 0; // 몫
+    public static double YH_Long_d = 0; // 나머지 
+
+    public Text google_map; // 구글
+    public Text sum_map; // 배열 
+    public Text unity_map; // 유니티
+ //   public Text text_FLat; // 비율적용 위도
+ //  public Text text_FLong; // 비율적용 경도 
+
+
 
  //   public GameObject Player;
    // public Text text_refresh;
@@ -52,8 +67,8 @@ public class PlayerGPSTest : MonoBehaviour
         }
         else//GPS가 없는 경우 (GPS가 없는 기기거나 안드로이드 GPS를 설정 하지 않았을 경우
         {
-            text_latitude.text = "GPS not available";
-            text_longitude.text = "GPS not available";
+  //          text_latitude.text = "GPS not available";
+  //          text_longitude.text = "GPS not available";
         }
     }
 
@@ -64,8 +79,10 @@ public class PlayerGPSTest : MonoBehaviour
         current_Lat = currentGPSPosition.latitude * detailed_num;
         current_Long = currentGPSPosition.longitude * detailed_num;
 
-        text_latitude.text = "위도 " + current_Lat.ToString();//위도 값을 받아,텍스트에 출력합니다
-        text_longitude.text = "경도 " + current_Long.ToString();//경도 값을 받아, 텍스트에 출력합니다.
+        sum_map.text = "c Lat :" + current_Lat.ToString() + "c Long :" + current_Long.ToString(); ;
+
+        //        text_latitude.text = "위도 " + current_Lat.ToString();//위도 값을 받아,텍스트에 출력합니다
+        //       text_longitude.text = "경도 " + current_Long.ToString();//경도 값을 받아, 텍스트에 출력합니다.
 
         gps_connect++;
 
@@ -89,9 +106,41 @@ public class PlayerGPSTest : MonoBehaviour
                }
         */
         //    Player.transform.position = new Vector3((float)f_Lat, 0, (float)f_Long);
-        text_FLong.text = "비율적용 경도 " + (current_Lat - 37.48747).ToString();//경도 값을 받아, 텍스트에 출력합니다.
+//        text_FLong.text = "비율적용 경도 " + (current_Lat - 37.48747).ToString();//경도 값을 받아, 텍스트에 출력합니다.
 
-        text_FLat.text = "비율적용 위도 " + f_Lat.ToString();//위도 값을 받아,텍스트에 출력합니다.
+//        text_FLat.text = "비율적용 위도 " + f_Lat.ToString();//위도 값을 받아,텍스트에 출력합니다.
 //        text_FLong.text = "비율적용 경도 " + f_Long.ToString();//경도 값을 받아, 텍스트에 출력합니다.
+    }
+
+    private void Update()
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            A_Lat[i] = current_Lat;
+            Sum_Lat = A_Lat[i];
+        }
+
+        for (int i = 0; i < 20; i++)
+        {
+            A_Long[i] = current_Long;
+            Sum_Long = A_Long[i];
+        }
+
+        YHGPS();
+    }
+    public void YHGPS()
+    {
+        YH_Lat_i = Sum_Lat * 190 / 0.00194;
+        YH_Lat_d = Sum_Long * 190 % 0.00194;
+        YH_Lat = YH_Lat_i + YH_Lat_d;
+
+        YH_Long_i = Sum_Long * 250 / 0.00255;
+        YH_Long_d = Sum_Long * 250 % 0.00255;
+        YH_Long = YH_Long_i + YH_Long_d;
+
+        this.transform.position = new Vector3((float)YH_Lat, 0, (float)YH_Long);
+
+        google_map.text = "Lat : " + Sum_Lat.ToString() + ", Long : " + Sum_Long.ToString();
+        unity_map.text = "Unity Lat : " + YH_Lat.ToString() + ", Unity Long : " + YH_Long.ToString();
     }
 }
