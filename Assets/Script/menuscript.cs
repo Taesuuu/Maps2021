@@ -380,7 +380,7 @@ public class menuscript : MonoBehaviour
         }
         if (onechose == 5 && twochose == 3)
         {
-            for (int i = 0; i < 18; i++)
+            for (int i = 0; i < 15; i++)
             {
                 classroom[i].SetActive(true);
             }
@@ -415,10 +415,10 @@ public class menuscript : MonoBehaviour
             classNum[14].text = "5315";
             classroom[14].gameObject.tag = "5315";
            
-             classNum[15].text = "5321";
+            /*  classNum[15].text = "5321";
               classroom[15].gameObject.tag = "5321";
               classNum[16].text = "5322";
-              classroom[16].gameObject.tag = "5322"; 
+              classroom[16].gameObject.tag = "5322"; */
         }
         if (onechose == 5 && twochose == 4)
         {
@@ -448,7 +448,6 @@ public class menuscript : MonoBehaviour
             classroom[9].gameObject.tag = "5410";
             classNum[10].text = "5411";
             classroom[10].gameObject.tag = "5411";
-     
             classNum[11].text = "5421";
             classroom[11].gameObject.tag = "5421";     
         }
