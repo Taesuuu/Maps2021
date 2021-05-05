@@ -203,7 +203,7 @@ public class menuscript : MonoBehaviour
         }
         lastmenu.SetActive(true);
 
-
+      
 
         if (onechose == 7 && twochose == 1)
         {
@@ -252,7 +252,7 @@ public class menuscript : MonoBehaviour
             {
                 classroom[i].SetActive(true);
             }
-
+            
             classNum[0].text = "7301";
             classroom[0].gameObject.tag = "7301";
             classNum[1].text = "7302";
@@ -311,7 +311,7 @@ public class menuscript : MonoBehaviour
 
         }
 
-        // 나눔관
+        // 나눔관 
 
         if (onechose == 5 && twochose == 1)
         {
@@ -376,7 +376,7 @@ public class menuscript : MonoBehaviour
             classroom[10].gameObject.tag = "5211";
             classNum[11].text = "5212";
             classroom[11].gameObject.tag = "5212";
-
+            
         }
         if (onechose == 5 && twochose == 3)
         {
@@ -414,7 +414,7 @@ public class menuscript : MonoBehaviour
             classroom[13].gameObject.tag = "5314";
             classNum[14].text = "5315";
             classroom[14].gameObject.tag = "5315";
-
+           
             /*  classNum[15].text = "5321";
               classroom[15].gameObject.tag = "5321";
               classNum[16].text = "5322";
@@ -449,7 +449,7 @@ public class menuscript : MonoBehaviour
             classNum[10].text = "5411";
             classroom[10].gameObject.tag = "5411";
             classNum[11].text = "5421";
-            classroom[11].gameObject.tag = "5421";
+            classroom[11].gameObject.tag = "5421";     
         }
         if (onechose == 5 && twochose == 5)
         {
@@ -484,7 +484,7 @@ public class menuscript : MonoBehaviour
             classNum[12].text = "5521";
             classroom[12].gameObject.tag = "5521";
             classNum[13].text = "5522";
-            classroom[13].gameObject.tag = "5522";
+            classroom[13].gameObject.tag = "5522";           
         }
         if (onechose == 5 && twochose == 6)
         {
@@ -517,7 +517,7 @@ public class menuscript : MonoBehaviour
             classNum[11].text = "5612";
             classroom[11].gameObject.tag = "5612";
             classNum[12].text = "5621";
-            classroom[12].gameObject.tag = "5621";
+            classroom[12].gameObject.tag = "5621";          
         }
         if (onechose == 5 && twochose == 7)
         {
@@ -540,7 +540,7 @@ public class menuscript : MonoBehaviour
             classNum[6].text = "B5112";
             classroom[6].gameObject.tag = "B5112";
             classNum[7].text = "B5113";
-            classroom[7].gameObject.tag = "B5113";
+            classroom[7].gameObject.tag = "B5113";     
         }
 
 
@@ -552,7 +552,7 @@ public class menuscript : MonoBehaviour
         la = EventSystem.current.currentSelectedGameObject.tag;
         finsh.SetActive(true);
         lastch.text = fi + " " + cn + " " + la;
-
+       
     }
 
     public void rego()
@@ -563,6 +563,6 @@ public class menuscript : MonoBehaviour
     {
         SceneManager.LoadScene(3);
         TargetChange.getClassRoom = int.Parse(la);
-
+        
     }
 }

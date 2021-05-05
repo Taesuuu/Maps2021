@@ -8,7 +8,7 @@ public class TargetChange : MonoBehaviour
 
     public static int getClassRoom;
     public static string getco;
-
+    
 
 
     void Start()
@@ -72,7 +72,7 @@ public class TargetChange : MonoBehaviour
                 break;
 
 
-
+            
             case 5101:
                 this.transform.position = new Vector3(12, 0, 49);
                 break;
@@ -144,6 +144,7 @@ public class TargetChange : MonoBehaviour
             default:
                 break;
 
+     
 
         }
 
@@ -152,18 +153,18 @@ public class TargetChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
+        
+        
     }
 
     public void changesss()
     {
 
+      
 
+       
 
-
-
-
+        
 
 
 
