@@ -21,6 +21,14 @@ public class PlayerGPSTest : MonoBehaviour
     public static double Sum_Lat = 0; // 위도 합 
     public static double Sum_Long = 0; // 경도 합
 
+    public static double Sum_Lat_i = 0; // 위도 합 / 20
+    public static double Sum_Lat_d = 0; // 위도 합 % 20
+    public static double Sum_Long_i = 0; // 경도 합 / 20
+    public static double Sum_Long_d = 0; // 경도 합 % 20
+
+    public static double Sum_Lat_F = 0; // 위도 합 
+    public static double Sum_Long_F = 0; // 경도 합
+
     public static double YH_Lat = 0; // unity상 위도 (37.xxx)
     public static double YH_Long = 0; // unity상 경도 (126.xxx)
     public static double YH_Lat_i = 0; // 몫
@@ -79,7 +87,7 @@ public class PlayerGPSTest : MonoBehaviour
         current_Lat = currentGPSPosition.latitude * detailed_num;
         current_Long = currentGPSPosition.longitude * detailed_num;
 
-        sum_map.text = "c Lat :" + current_Lat.ToString() + "c Long :" + current_Long.ToString(); ;
+        google_map.text = "c Lat :" + current_Lat.ToString() + "c Long :" + current_Long.ToString(); 
 
         //        text_latitude.text = "위도 " + current_Lat.ToString();//위도 값을 받아,텍스트에 출력합니다
         //       text_longitude.text = "경도 " + current_Long.ToString();//경도 값을 받아, 텍스트에 출력합니다.
@@ -89,13 +97,13 @@ public class PlayerGPSTest : MonoBehaviour
        // text_refresh.text = "갱신 횟수 : " + gps_connect.ToString();
     }
 
-    public void Map() // 비율로 바꾸기 
+ /*     public void Map() // 비율로 바꾸기 
     {
         f_Lat = (current_Lat - 37.48747) * 100000;
         f_Long = (current_Long - 126.81980) * 100000;
 
         // 음수 -> 양수 
-        /*       if (f_Lat < 0)
+              if (f_Lat < 0)
                {
                    f_Lat = f_Lat * (-1);
                }
@@ -104,34 +112,42 @@ public class PlayerGPSTest : MonoBehaviour
                {
                    f_Long = f_Long * (-1);
                }
-        */
-        //    Player.transform.position = new Vector3((float)f_Lat, 0, (float)f_Long);
-//        text_FLong.text = "비율적용 경도 " + (current_Lat - 37.48747).ToString();//경도 값을 받아, 텍스트에 출력합니다.
+        
+            Player.transform.position = new Vector3((float)f_Lat, 0, (float)f_Long);
+        text_FLong.text = "비율적용 경도 " + (current_Lat - 37.48747).ToString();//경도 값을 받아, 텍스트에 출력합니다.
 
-//        text_FLat.text = "비율적용 위도 " + f_Lat.ToString();//위도 값을 받아,텍스트에 출력합니다.
-//        text_FLong.text = "비율적용 경도 " + f_Long.ToString();//경도 값을 받아, 텍스트에 출력합니다.
+        text_FLat.text = "비율적용 위도 " + f_Lat.ToString();//위도 값을 받아,텍스트에 출력합니다.
+        text_FLong.text = "비율적용 경도 " + f_Long.ToString();//경도 값을 받아, 텍스트에 출력합니다.
     }
-
+*/
     private void Update()
     {
         for (int i = 0; i < 20; i++)
         {
             A_Lat[i] = current_Lat;
-            Sum_Lat = A_Lat[i];
+            A_Lat[i] = A_Lat[i] - 37.48808; // 거리구하기 
+            Sum_Lat += A_Lat[i]; // 20개 더하기 
         }
+        Sum_Lat_i = Sum_Lat / 20; // 평균구하기 int
+        Sum_Lat_d = Sum_Lat % 20; // double 
+        Sum_Lat_F = Sum_Lat_i + Sum_Lat_d; 
 
         for (int i = 0; i < 20; i++)
         {
             A_Long[i] = current_Long;
-            Sum_Long = A_Long[i];
+            A_Long[i] = A_Long[i] - 126.81970;
+            Sum_Long += A_Long[i];
         }
+        Sum_Long_i = Sum_Long / 20;
+        Sum_Long_d = Sum_Long % 20;
+        Sum_Long_F = Sum_Long_i + Sum_Long_d; 
 
         YHGPS();
     }
     public void YHGPS()
     {
-        YH_Lat_i = Sum_Lat * 190 / 0.00194;
-        YH_Lat_d = Sum_Long * 190 % 0.00194;
+        YH_Lat_i = Sum_Lat_F * 190 / 0.00194;
+        YH_Lat_d = Sum_Long_F * 190 % 0.00194;
         YH_Lat = YH_Lat_i + YH_Lat_d;
 
         YH_Long_i = Sum_Long * 250 / 0.00255;
@@ -140,7 +156,7 @@ public class PlayerGPSTest : MonoBehaviour
 
         this.transform.position = new Vector3((float)YH_Lat, 0, (float)YH_Long);
 
-        google_map.text = "Lat : " + Sum_Lat.ToString() + ", Long : " + Sum_Long.ToString();
+        sum_map.text = "s_Lat : " + Sum_Lat_F.ToString() + ", s_Long : " + Sum_Long_F.ToString() + " a_lat" + A_Lat[1].ToString() + " a_long: " + A_Long[1].ToString();
         unity_map.text = "Unity Lat : " + YH_Lat.ToString() + ", Unity Long : " + YH_Long.ToString();
     }
 }
