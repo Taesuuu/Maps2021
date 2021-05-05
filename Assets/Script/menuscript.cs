@@ -380,7 +380,7 @@ public class menuscript : MonoBehaviour
         }
         if (onechose == 5 && twochose == 3)
         {
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < 17; i++)
             {
                 classroom[i].SetActive(true);
             }
@@ -415,10 +415,10 @@ public class menuscript : MonoBehaviour
             classNum[14].text = "5315";
             classroom[14].gameObject.tag = "5315";
            
-            /*  classNum[15].text = "5321";
+              classNum[15].text = "5321";
               classroom[15].gameObject.tag = "5321";
               classNum[16].text = "5322";
-              classroom[16].gameObject.tag = "5322"; */
+              classroom[16].gameObject.tag = "5322"; 
         }
         if (onechose == 5 && twochose == 4)
         {
@@ -526,21 +526,21 @@ public class menuscript : MonoBehaviour
                 classroom[i].SetActive(true);
             }
             classNum[0].text = "B5101";
-            classroom[0].gameObject.tag = "B5101";
+            classroom[0].gameObject.tag = "5001";
             classNum[1].text = "B5102";
-            classroom[1].gameObject.tag = "B5102";
+            classroom[1].gameObject.tag = "5002";
             classNum[2].text = "B5103";
-            classroom[2].gameObject.tag = "B5103";
+            classroom[2].gameObject.tag = "5003";
             classNum[3].text = "B5104";
-            classroom[3].gameObject.tag = "B5104";
+            classroom[3].gameObject.tag = "5004";
             classNum[4].text = "B5105";
-            classroom[4].gameObject.tag = "B5105";
+            classroom[4].gameObject.tag = "5005";
             classNum[5].text = "B5106";
-            classroom[5].gameObject.tag = "B5106";
+            classroom[5].gameObject.tag = "5006";
             classNum[6].text = "B5112";
-            classroom[6].gameObject.tag = "B5112";
+            classroom[6].gameObject.tag = "5012";
             classNum[7].text = "B5113";
-            classroom[7].gameObject.tag = "B5113";     
+            classroom[7].gameObject.tag = "5013";     
         }
 
 
