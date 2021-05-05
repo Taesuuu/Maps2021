@@ -214,7 +214,7 @@ public class menuscript : MonoBehaviour
         }
         if (onechose == 7 && twochose == 2)
         {
-            for (int i = 0; i < 13; i++)
+            for (int i = 0; i < 20; i++)
             {
                 classroom[i].SetActive(true);
             }
@@ -327,7 +327,7 @@ public class menuscript : MonoBehaviour
     }
     public void nextgo()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
         TargetChange.getClassRoom = int.Parse(la);
         
     }
