@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/newMain.unity
     guid: 14a4b256a9d654f1d95676852d793227
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: "Assets/Scenes/\uB098\uB214\uAD00/\uB098\uB214\uAD001.unity"
-    guid: 4725c8e459b221b448c1e1cb0d6b64c2
+    path: "Assets/Scenes/\u1102\u1161\u1102\u116E\u11B7\u1100\u116A\u11AB/\u1102\u1161\u1102\u116E\u11B7\u1100\u116A\u11AB3.unity"
+    guid: b1d9ac34583f747d3898869b7dfdecb4
   m_configObjects: {}
