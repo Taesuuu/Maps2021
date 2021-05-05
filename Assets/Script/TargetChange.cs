@@ -22,6 +22,15 @@ public class TargetChange : MonoBehaviour
         Debug.Log(getco);
         switch (getClassRoom)
         {
+            //7-3F
+            case 7301:
+                this.transform.position = new Vector3(13, 0, 32);
+                break;
+            case 7302:
+                this.transform.position = new Vector3(13, 0, 25);
+                break;
+
+            // 7-2F
             case 7201:
                 this.transform.position = new Vector3(-30, 14, 1);
                 break;
