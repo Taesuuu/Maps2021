@@ -333,18 +333,18 @@ public class menuscript : MonoBehaviour
             classroom[5].gameObject.tag = "5107";
             classNum[6].text = "5108";
             classroom[6].gameObject.tag = "5108";
-            classNum[7].text = "5109";
+            classNum[7].text = "Healing Cafe";
             classroom[7].gameObject.tag = "5109";
             classNum[8].text = "5110";
             classroom[8].gameObject.tag = "5110";
             classNum[9].text = "5111";
             classroom[9].gameObject.tag = "5111";
-            classNum[10].text = "5110";
-            classroom[10].gameObject.tag = "5110";
-            classNum[11].text = "5111";
-            classroom[11].gameObject.tag = "5111";
-            classNum[12].text = "5112";
-            classroom[12].gameObject.tag = "5112";
+            classNum[10].text = "JOB CAFE";
+            classroom[10].gameObject.tag = "5113";
+            classNum[11].text = "Cafe";
+            classroom[11].gameObject.tag = "5116";
+            classNum[12].text = "Bookstore";
+            classroom[12].gameObject.tag = "5115";
         }
         if (onechose == 5 && twochose == 2)
         {
@@ -561,7 +561,7 @@ public class menuscript : MonoBehaviour
     }
     public void nextgo()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
         TargetChange.getClassRoom = int.Parse(la);
         
     }

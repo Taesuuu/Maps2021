@@ -61,9 +61,44 @@ public class TargetChange : MonoBehaviour
             case 7213:
                 this.transform.position = new Vector3(-40, 14, -41);
                 break;
+
+
+            
+            case 5101:
+                this.transform.position = new Vector3(12, 0, 49);
+                break;
+            case 5102:
+                this.transform.position = new Vector3(12, 0, 37);
+                break;
+            case 5103:
+                this.transform.position = new Vector3(12, 0, 27);
+                break;
+            case 5104:
+                this.transform.position = new Vector3(12, 0, 17);
+                break;
+            case 5106:
+                this.transform.position = new Vector3(12, 0, -33);
+                break;
+            case 5108:
+                this.transform.position = new Vector3(12, 0, -44);
+                break;
+            case 5109:
+                this.transform.position = new Vector3(12, 0, -62);
+                break;
+            case 5110:
+                this.transform.position = new Vector3(-11, 0, 50);
+                break;
+            case 5111:
+                this.transform.position = new Vector3(-11, 0, 37);
+                break;
+            case 5113:
+                this.transform.position = new Vector3(-11, 0, -8);
+                break;
+
             default:
                 break;
 
+     
 
         }
 
