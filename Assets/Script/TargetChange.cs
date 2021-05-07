@@ -231,14 +231,7 @@ public class TargetChange : MonoBehaviour
                 this.transform.position = new Vector3(-43, 15, 34);
                 break;
 
-            //7-3F
-            case 7301:
-                this.transform.position = new Vector3(13, 0, 32);
-                break;
-            case 7302:
-                this.transform.position = new Vector3(13, 0, 25);
-                break;
-
+           
             // 7-2F
             case 7201:
                 this.transform.position = new Vector3(-30, 14, 1);
@@ -280,7 +273,48 @@ public class TargetChange : MonoBehaviour
                 this.transform.position = new Vector3(-40, 14, -41);
                 break;
 
-                // na seok hun
+            //7-3F
+            case 7301:
+                this.transform.position = new Vector3(12, 0, 31);
+                break;
+            case 7302:
+                this.transform.position = new Vector3(12, 0, 23);
+                break;
+            case 7303:
+                this.transform.position = new Vector3(15, 0, 10);
+                break;
+            case 7304:
+                this.transform.position = new Vector3(15, 0, 0);
+                break;
+            case 7305:
+                this.transform.position = new Vector3(2, 0, -22);
+                break;
+            case 7306:
+                this.transform.position = new Vector3(-11, 0, -24);
+                break;
+            case 7307:
+                this.transform.position = new Vector3(-15, 0, -9);
+                break;
+            case 7308:
+                this.transform.position = new Vector3(-15, 0, 8);
+                break;
+            case 7309:
+                this.transform.position = new Vector3(-15, 0, 24);
+                break;
+            case 7310:
+                this.transform.position = new Vector3(-14, 0, 32);
+                break;
+            case 7311:
+                this.transform.position = new Vector3(-6, 0, 32);
+                break;
+            case 7312:
+                this.transform.position = new Vector3(2, 0, 7);
+                break;
+            case 7313:
+                this.transform.position = new Vector3(2, 0, -9);
+                break;
+
+            // na seok hun
 
             case 5101:
                 this.transform.position = new Vector3(12, 0, 49);
