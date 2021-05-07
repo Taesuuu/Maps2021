@@ -10,8 +10,6 @@ public class ChangsMap : MonoBehaviour
 
     public void changeM()
     {
-        SceneManager.LoadScene("Api");
-        
-        
+        SceneManager.LoadScene("Map");
     }
 }
