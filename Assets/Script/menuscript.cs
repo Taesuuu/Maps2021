@@ -956,7 +956,7 @@ public class menuscript : MonoBehaviour
     }
     public void nextgo()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("2-2");
         TargetChange.getClassRoom = int.Parse(la);
 
     }
