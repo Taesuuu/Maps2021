@@ -15,24 +15,18 @@ public class PlayerGPSTest : MonoBehaviour
 
     public double[] Ar_Lat = new double[20]; // 위도 배열
     public double[] Ar_Long = new double[20]; // 경도 배열 
-    public static float Sum_Lat = 0; // 위도 합 
-    public static float Sum_Long = 0; // 경도 합
 
     public static double Average_Lat_F = 0; // 위도 합 
     public static double Average_Long_F = 0; // 경도 합
 
     public static double YH_Lat = 0; // unity상 위도 (37.xxx)
     public static double YH_Long = 0; // unity상 경도 (126.xxx)
-    public static double YH_Lat_i = 0; // 몫
-    public static double YH_Lat_d = 0; // 나머지
-    public static double YH_Long_i = 0; // 몫
-    public static double YH_Long_d = 0; // 나머지 
-
+    /*
     public Text google_map; // 구글
     public Text sum_map; // 배열 
     public Text unity_map; // 유니티
     public Text array_check; // 배열 확인  
-
+    */
     void Start()
     {
         Input.location.Start(0.5f);
@@ -55,11 +49,11 @@ public class PlayerGPSTest : MonoBehaviour
                 InvokeRepeating("RetrieveGPSData", 0.0001f, 1.0f);//0.0001초에 실행하고 1초마다 해당 함수를 실행합니다.
             }
         }
-        else //GPS가 없는 경우 (GPS가 없는 기기거나 안드로이드 GPS를 설정 하지 않았을 경우
+ /*       else //GPS가 없는 경우 (GPS가 없는 기기거나 안드로이드 GPS를 설정 하지 않았을 경우
         {
             google_map.text = "GPS not available";
             google_map.text = "GPS not available";
-        }
+        } */
     }
 
     void RetrieveGPSData()
@@ -69,13 +63,12 @@ public class PlayerGPSTest : MonoBehaviour
         current_Lat = currentGPSPosition.latitude * detailed_num;
         current_Long = currentGPSPosition.longitude * detailed_num;
 
-        google_map.text = "c Lat :" + current_Lat.ToString() + "c Long :" + current_Long.ToString();
+ //       google_map.text = "c Lat :" + current_Lat.ToString() + "c Long :" + current_Long.ToString();
 
         for (int i = 0; i < 20; i++)
         {
             Ar_Lat[i] = current_Lat;
             Ar_Lat[i] = (Ar_Lat[i] - 37.48808); // 거리구하기 
-          //  Sum_Lat += A_Lat[i]; // 20개 더하기 
         }
         Average_Lat_F = Ar_Lat.Average();
 
@@ -83,7 +76,6 @@ public class PlayerGPSTest : MonoBehaviour
         {
             Ar_Long[i] = current_Long;
             Ar_Long[i] = (Ar_Long[i] - 126.81970);
-        //    Sum_Long += Ar_Long[i];
         }
         Average_Long_F = Ar_Long.Average(); 
     }
@@ -95,16 +87,12 @@ public class PlayerGPSTest : MonoBehaviour
 
     public void YHGPS()
     {
-     //   YH_Lat_i = (Average_Lat_F * 190 / 0.00194);
-     //   YH_Lat_d = (Average_Long_F * 190 % 0.00194);
-        YH_Lat = (Average_Lat_F * 190 / 0.00194);
 
-     //   YH_Long_i =(Sum_Long * 250 / 0.00255);
-     //   YH_Long_d =(Sum_Long * 250 % 0.00255);
+        YH_Lat = (Average_Lat_F * 190 / 0.00194);
         YH_Long = (Average_Long_F * 250 / 0.00255);
 
         this.transform.position = new Vector3((float)YH_Long, 0, (float)YH_Lat);
-
+        /*
         array_check.text = " a_lat_0 : " + Ar_Lat[0].ToString() + " a_long_0 : " + Ar_Long[0].ToString() +
                            " a_lat_1 : " + Ar_Lat[1].ToString() + " a_long_1 : " + Ar_Long[1].ToString() +
                            " a_lat_2 : " + Ar_Lat[2].ToString() + " a_long_2 : " + Ar_Long[2].ToString() +
@@ -130,5 +118,6 @@ public class PlayerGPSTest : MonoBehaviour
         unity_map.text = "Unity Lat : " + YH_Lat.ToString() + ", Unity Long : " + YH_Long.ToString() +
                          "\n(float)Unity_Long : " + (float)YH_Long + ", (float)Unity_Lat : " + (float)YH_Lat +
                          "\n (x, z) : (" + this.transform.position.x + ", " + this.transform.position.z + ")";
+        */
     }
 }

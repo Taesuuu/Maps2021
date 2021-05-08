@@ -816,12 +816,224 @@ public class TargetChange : MonoBehaviour
                 this.transform.position = new Vector3(-6, 0, -23);
                 break;
 
+            // ujin
+            // 6-B1 == 7xxxx
+            case 76101:
+                this.transform.position = new Vector3(15, 0, -30);
+                break;
+            case 76102:
+                this.transform.position = new Vector3(15, 0, -18);
+                break;
+            case 76103_1:
+                this.transform.position = new Vector3(15, 0, -5);
+                break;
+            case 76103_2:
+                this.transform.position = new Vector3(15, 0, 7);
+                break;
+            case 76104:
+                this.transform.position = new Vector3(15, 0, 19);
+                break;
+            case 76105:
+                this.transform.position = new Vector3(15, 0, 32);
+                break;
+            case 76106:
+                this.transform.position = new Vector3(10, 0, 40);
+                break;
+            case 76107:
+                this.transform.position = new Vector3(4, 0, 5);
+                break;
+            case 76108:
+                this.transform.position = new Vector3(4, 0, -11);
+                break;
 
+            // 6-1
+            case 6101:
+                this.transform.position = new Vector3(15, 0, -31);
+                break;
+            case 6102:
+                this.transform.position = new Vector3(15, 0, -22);
+                break;
+            case 6103:
+                this.transform.position = new Vector3(15, 0, -13);
+                break;
+            case 6104:
+                this.transform.position = new Vector3(15, 0, 6);
+                break;
+            case 6105:
+                this.transform.position = new Vector3(15, 0, 15);
+                break;
+            case 6106:
+                this.transform.position = new Vector3(15, 0, 24);
+                break;
+            case 6107:
+                this.transform.position = new Vector3(15, 0, 33);
+                break;
 
+            //6-2
+            case 6201:
+                this.transform.position = new Vector3(15, 0, -31);
+                break;
+            case 6202:
+                this.transform.position = new Vector3(15, 0, -22);
+                break;
+            case 6203:
+                this.transform.position = new Vector3(15, 0, -13);
+                break;
+            case 6204:
+                this.transform.position = new Vector3(15, 0, -4);
+                break;
+            case 6205:
+                this.transform.position = new Vector3(15, 0, 6);
+                break;
+            case 6206:
+                this.transform.position = new Vector3(15, 0, 15);
+                break;
+            case 6207:
+                this.transform.position = new Vector3(15, 0, 24);
+                break;
+            case 6208:
+                this.transform.position = new Vector3(15, 0, 33);
+                break;
+            
+            //6-3
+            case 6301:
+                this.transform.position = new Vector3(15, 0, -33);
+                break;
+            case 6302:
+                this.transform.position = new Vector3(15, 0, -26);
+                break;
+            case 6303:
+                this.transform.position = new Vector3(15, 0, -19);
+                break;
+            case 6304:
+                this.transform.position = new Vector3(15, 0, -12);
+                break;
+            case 6305:
+                this.transform.position = new Vector3(15, 0, -6);
+                break;
+            case 6306:
+                this.transform.position = new Vector3(15, 0, 1);
+                break;
+            case 6307:
+                this.transform.position = new Vector3(15, 0, 8);
+                break;
+            case 6308:
+                this.transform.position = new Vector3(15, 0, 15);
+                break;
+            case 6309:
+                this.transform.position = new Vector3(15, 0, 22);
+                break;
+            case 6310:
+                this.transform.position = new Vector3(15, 0, 29);
+                break;
+            case 6311:
+                this.transform.position = new Vector3(15, 0, 35);
+                break;
 
+            // 6-4
+            case 6401:
+                this.transform.position = new Vector3(15, 0, -30);
+                break;
+            case 6402:
+                this.transform.position = new Vector3(15, 0, -20);
+                break;
+            case 6403:
+                this.transform.position = new Vector3(15, 0, -9);
+                break;
+            case 6404:
+                this.transform.position = new Vector3(15, 0, 0);
+                break;
+            case 6405:
+                this.transform.position = new Vector3(15, 0, 11);
+                break;
+            case 6406:
+                this.transform.position = new Vector3(15, 0, 22);
+                break;
+            case 6407:
+                this.transform.position = new Vector3(15, 0, 32);
+                break;
 
+            // 6-5
+            case 6501:
+                this.transform.position = new Vector3(15, 0, -31);
+                break;
+            case 6502:
+                this.transform.position = new Vector3(15, 0, -22);
+                break;
+            case 6503:
+                this.transform.position = new Vector3(15, 0, -13);
+                break;
+            case 6504:
+                this.transform.position = new Vector3(15, 0, -3);
+                break;
+            case 6505:
+                this.transform.position = new Vector3(15, 0, 6);
+                break;
+            case 6506:
+                this.transform.position = new Vector3(15, 0, 15);
+                break;
+            case 6507:
+                this.transform.position = new Vector3(15, 0, 24);
+                break;
+            case 6508:
+                this.transform.position = new Vector3(15, 0, 33);
+                break;
 
-
+            //6-6
+            case 6601:
+                this.transform.position = new Vector3(15, 0, -34);
+                break;
+            case 6602:
+                this.transform.position = new Vector3(15, 0, -30);
+                break;
+            case 6603:
+                this.transform.position = new Vector3(15, 0, -26);
+                break;
+            case 6604:
+                this.transform.position = new Vector3(15, 0, -22);
+                break;
+            case 6605:
+                this.transform.position = new Vector3(15, 0, -17);
+                break;
+            case 6606:
+                this.transform.position = new Vector3(15, 0, -13);
+                break;
+            case 6607:
+                this.transform.position = new Vector3(15, 0, -9);
+                break;
+            case 6608:
+                this.transform.position = new Vector3(15, 0, -4);
+                break;
+            case 6609:
+                this.transform.position = new Vector3(15, 0, -1);
+                break;
+            case 6610:
+                this.transform.position = new Vector3(15, 0, 4);
+                break;
+            case 6611:
+                this.transform.position = new Vector3(15, 0, 8);
+                break;
+            case 6612:
+                this.transform.position = new Vector3(15, 0, 12);
+                break;
+            case 6613:
+                this.transform.position = new Vector3(15, 0, 16);
+                break;
+            case 6614:
+                this.transform.position = new Vector3(15, 0, 20);
+                break;
+            case 6615:
+                this.transform.position = new Vector3(15, 0, 24);
+                break;
+            case 6616:
+                this.transform.position = new Vector3(15, 0, 28);
+                break;
+            case 6617:
+                this.transform.position = new Vector3(15, 0, 33);
+                break;
+            case 6618:
+                this.transform.position = new Vector3(15, 0, 37);
+                break;
 
             default:
                 break;
