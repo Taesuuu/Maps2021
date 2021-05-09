@@ -38,12 +38,6 @@ public class menuscript : MonoBehaviour
         lastmenu.SetActive(false);
         finsh.SetActive(false);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     public void menuup()
     {
         menus.SetActive(true);
