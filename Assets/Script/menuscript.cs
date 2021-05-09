@@ -1447,6 +1447,7 @@ public class menuscript : MonoBehaviour
         SceneManager.LoadScene("Map");
         goclassRoom.oneclass = onechose;
         goclassRoom.twoclass = twochose;
+        maptarget.gogo = onechose;
         TargetChange.getClassRoom = int.Parse(la);
 
     }
