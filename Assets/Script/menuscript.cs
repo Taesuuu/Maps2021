@@ -53,9 +53,11 @@ public class menuscript : MonoBehaviour
         menus.SetActive(false);
         submenu.SetActive(false);
         lastmenu.SetActive(false);
+        finsh.SetActive(false);
     }
     public void goyuhan()
     {
+        lastmenu.SetActive(false);
         getstag = EventSystem.current.currentSelectedGameObject.tag;
 
         for (int i = 0; i < floors.Length; i++)
@@ -100,10 +102,12 @@ public class menuscript : MonoBehaviour
 
         if (onechose == 1)
         {
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 9; i++)
             {
                 floors[i].SetActive(true);
             }
+            floors[6].SetActive(false);
+            floors[7].SetActive(false);
         }
         else if (onechose == 2)
         {
@@ -200,6 +204,10 @@ public class menuscript : MonoBehaviour
             case "B2":
                 twochose = 8;
                 cn = "B2층";
+                break;
+            case "PH":
+                twochose = 9;
+                cn = "PH층";
                 break;
         }
         lastmenu.SetActive(true);
@@ -1138,6 +1146,287 @@ public class menuscript : MonoBehaviour
             classroom[10].gameObject.tag = "6318";
         }
 
+        // 1호고
+        
+        if (onechose == 1 && twochose == 1)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                classroom[i].SetActive(true);
+            }
+            classNum[0].text = "1101";
+            classroom[0].gameObject.tag = "1101";
+            classNum[1].text = "1102";
+            classroom[1].gameObject.tag = "1102";
+            classNum[2].text = "1103";
+            classroom[2].gameObject.tag = "1103";
+            classNum[3].text = "1104";
+            classroom[3].gameObject.tag = "1104";
+        }
+
+        if (onechose == 1 && twochose == 2)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                classroom[i].SetActive(true);
+            }
+            classNum[0].text = "1201";
+            classroom[0].gameObject.tag = "1201";
+            classNum[1].text = "1202";
+            classroom[1].gameObject.tag = "1202";
+            classNum[2].text = "1203";
+            classroom[2].gameObject.tag = "1203";
+            classNum[3].text = "1204";
+            classroom[3].gameObject.tag = "1204";
+            classNum[4].text = "1205";
+            classroom[4].gameObject.tag = "1205";
+            classNum[5].text = "1206";
+            classroom[5].gameObject.tag = "1206";
+            classNum[6].text = "1207";
+            classroom[6].gameObject.tag = "1207";
+        }
+        if (onechose == 1 && twochose == 3)
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                classroom[i].SetActive(true);
+            }
+            classNum[0].text = "1301";
+            classroom[0].gameObject.tag = "1301";
+            classNum[1].text = "1302";
+            classroom[1].gameObject.tag = "1302";
+            classNum[2].text = "1303";
+            classroom[2].gameObject.tag = "1303";
+            classNum[3].text = "1304";
+            classroom[3].gameObject.tag = "1304";
+            classNum[4].text = "1305";
+            classroom[4].gameObject.tag = "1305";
+            classNum[5].text = "1306";
+            classroom[5].gameObject.tag = "1306";
+            classNum[6].text = "1307";
+            classroom[6].gameObject.tag = "1307";
+            classNum[7].text = "1308";
+            classroom[7].gameObject.tag = "1308";
+            classNum[8].text = "1309";
+            classroom[8].gameObject.tag = "1309";
+        }
+
+        if (onechose == 1 && twochose == 4)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                classroom[i].SetActive(true);
+            }
+            classNum[0].text = "1401";
+            classroom[0].gameObject.tag = "1401";
+            classNum[1].text = "1402";
+            classroom[1].gameObject.tag = "1402";
+            classNum[2].text = "1403";
+            classroom[2].gameObject.tag = "1403";
+            classNum[3].text = "1404";
+            classroom[3].gameObject.tag = "1404";
+            classNum[4].text = "1405";
+            classroom[4].gameObject.tag = "1405";
+        }
+
+        if (onechose == 1 && twochose == 5)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                classroom[i].SetActive(true);
+            }
+            classNum[0].text = "1501";
+            classroom[0].gameObject.tag = "1501";
+            classNum[1].text = "1502";
+            classroom[1].gameObject.tag = "1502";
+            classNum[2].text = "1503";
+            classroom[2].gameObject.tag = "1503";
+            classNum[3].text = "1504";
+            classroom[3].gameObject.tag = "1504";
+            classNum[4].text = "1505";
+            classroom[4].gameObject.tag = "1505";
+            classNum[5].text = "1506";
+            classroom[5].gameObject.tag = "1506";
+            classNum[6].text = "1507";
+            classroom[6].gameObject.tag = "1507";
+
+        }
+
+        if (onechose == 1 && twochose == 6)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                classroom[i].SetActive(true);
+            }
+            classNum[0].text = "1601";
+            classroom[0].gameObject.tag = "1601";
+            classNum[1].text = "1602";
+            classroom[1].gameObject.tag = "1602";
+            classNum[2].text = "1603";
+            classroom[2].gameObject.tag = "1603";
+            classNum[3].text = "1604";
+            classroom[3].gameObject.tag = "1604";
+            classNum[4].text = "1605";
+            classroom[4].gameObject.tag = "1605";
+            classNum[5].text = "1606";
+            classroom[5].gameObject.tag = "1606";
+            classNum[6].text = "1607";
+            classroom[6].gameObject.tag = "1607";
+
+        }
+
+        if (onechose == 1 && twochose == 9)
+        {
+            for (int i = 0; i < 1; i++)
+            {
+                classroom[i].SetActive(true);
+            }
+            classNum[0].text = "1701";
+            classroom[0].gameObject.tag = "1701";
+
+        }
+
+        if (onechose == 3 && twochose == 7)
+        {
+            for (int i = 0; i < 20; i++)
+            {
+
+                classroom[i].SetActive(true);
+            }
+            classNum[0].text = "73101";
+            classroom[0].gameObject.tag = "73101";
+            classNum[1].text = "73102";
+            classroom[1].gameObject.tag = "73102";
+            classNum[2].text = "73103";
+            classroom[2].gameObject.tag = "73103";
+            classNum[3].text = "73104";
+            classroom[3].gameObject.tag = "73104";
+            classNum[4].text = "73105";
+            classroom[4].gameObject.tag = "73105";
+            classNum[5].text = "73106";
+            classroom[5].gameObject.tag = "73106";
+        }
+
+        if (onechose == 3 && twochose == 1)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                classroom[i].SetActive(true);
+            }
+            classNum[0].text = "3101";
+            classroom[0].gameObject.tag = "3101";
+            classNum[1].text = "3102";
+            classroom[1].gameObject.tag = "3102";
+            classNum[2].text = "3103";
+            classroom[2].gameObject.tag = "3103";
+            classNum[3].text = "3104";
+            classroom[3].gameObject.tag = "3104";
+            classNum[4].text = "3105";
+            classroom[4].gameObject.tag = "3105";
+            classNum[5].text = "3106";
+            classroom[5].gameObject.tag = "3106";
+            classNum[6].text = "3107";
+            classroom[6].gameObject.tag = "3107";
+        }
+
+        if (onechose == 3 && twochose == 2)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                classroom[i].SetActive(true);
+            }
+            classNum[0].text = "3201";
+            classroom[0].gameObject.tag = "3201";
+            classNum[1].text = "3202";
+            classroom[1].gameObject.tag = "3202";
+            classNum[2].text = "3203";
+            classroom[2].gameObject.tag = "3203";
+            classNum[3].text = "3204";
+            classroom[3].gameObject.tag = "3204";
+            classNum[4].text = "3205";
+            classroom[4].gameObject.tag = "3205";
+            classNum[5].text = "3206";
+            classroom[5].gameObject.tag = "3206";
+            classNum[6].text = "3207";
+            classroom[6].gameObject.tag = "3207";
+        }
+
+        if (onechose == 3 && twochose == 3)
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                classroom[i].SetActive(true);
+            }
+            classNum[0].text = "3301";
+            classroom[0].gameObject.tag = "3201";
+            classNum[1].text = "3302";
+            classroom[1].gameObject.tag = "3202";
+            classNum[2].text = "3303";
+            classroom[2].gameObject.tag = "3203";
+            classNum[3].text = "3304";
+            classroom[3].gameObject.tag = "3204";
+            classNum[4].text = "3305";
+            classroom[4].gameObject.tag = "3205";
+            classNum[5].text = "3306";
+            classroom[5].gameObject.tag = "3206";
+            classNum[6].text = "3307";
+            classroom[6].gameObject.tag = "3207";
+            classNum[7].text = "3308";
+            classroom[7].gameObject.tag = "3308";
+        }
+
+        if (onechose == 3 && twochose == 4)
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                classroom[i].SetActive(true);
+            }
+            classNum[0].text = "3401";
+            classroom[0].gameObject.tag = "3401";
+            classNum[1].text = "3402";
+            classroom[1].gameObject.tag = "3402";
+            classNum[2].text = "3403";
+            classroom[2].gameObject.tag = "3403";
+            classNum[3].text = "3404";
+            classroom[3].gameObject.tag = "3404";
+            classNum[4].text = "3405";
+            classroom[4].gameObject.tag = "3405";
+            classNum[5].text = "3406";
+            classroom[5].gameObject.tag = "3406";
+            classNum[6].text = "3407";
+            classroom[6].gameObject.tag = "3407";
+            classNum[7].text = "3408";
+            classroom[7].gameObject.tag = "3408";
+        }
+
+        if (onechose == 3 && twochose == 5)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                classroom[i].SetActive(true);
+            }
+            classNum[0].text = "3501";
+            classroom[0].gameObject.tag = "3501";
+            classNum[1].text = "3502";
+            classroom[1].gameObject.tag = "3502";
+            classNum[2].text = "3503";
+            classroom[2].gameObject.tag = "3503";
+            classNum[3].text = "3504";
+            classroom[3].gameObject.tag = "3504";
+            classNum[4].text = "3505";
+            classroom[4].gameObject.tag = "3505";
+            classNum[5].text = "3506";
+            classroom[5].gameObject.tag = "3506";
+            classNum[6].text = "3507";
+            classroom[6].gameObject.tag = "3507";
+            classNum[7].text = "3508";
+            classroom[7].gameObject.tag = "3508";
+            classNum[8].text = "3509";
+            classroom[8].gameObject.tag = "3509";
+            classNum[9].text = "3510";
+            classroom[9].gameObject.tag = "3510";
+        }
+
         Debug.Log(twochose);
     }
 
@@ -1155,7 +1444,9 @@ public class menuscript : MonoBehaviour
     }
     public void nextgo()
     {
-        SceneManager.LoadScene("2-2");
+        SceneManager.LoadScene("Map");
+        goclassRoom.oneclass = onechose;
+        goclassRoom.twoclass = twochose;
         TargetChange.getClassRoom = int.Parse(la);
 
     }
