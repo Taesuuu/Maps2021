@@ -1140,7 +1140,7 @@ public class menuscript : MonoBehaviour
             classroom[10].gameObject.tag = "6318";
         }
 
-        // 1호고
+        // 1호관
         
         if (onechose == 1 && twochose == 1)
         {
