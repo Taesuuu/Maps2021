@@ -23,9 +23,11 @@ public class menuscript : MonoBehaviour
     public GameObject submenu;
     public GameObject lastmenu;
     public GameObject finsh;
+    public GameObject backimg;
 
     public GameObject[] floors;
     public GameObject[] classroom;
+    public GameObject[] popst;
 
     public TextMeshProUGUI[] classNum;
     public TextMeshProUGUI lastch;
@@ -41,6 +43,7 @@ public class menuscript : MonoBehaviour
     public void menuup()
     {
         menus.SetActive(true);
+        backimg.SetActive(false);
     }
     public void menudown()
     {
@@ -48,6 +51,7 @@ public class menuscript : MonoBehaviour
         submenu.SetActive(false);
         lastmenu.SetActive(false);
         finsh.SetActive(false);
+        backimg.SetActive(true);
     }
     public void goyuhan()
     {
@@ -1444,5 +1448,11 @@ public class menuscript : MonoBehaviour
         maptarget.gogo = onechose;
         TargetChange.getClassRoom = int.Parse(la);
 
+    }
+
+    public void pop7()
+    {
+        popst[0].SetActive(true);
+        backimg.SetActive(false);
     }
 }
