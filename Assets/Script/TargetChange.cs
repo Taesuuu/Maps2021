@@ -7,10 +7,7 @@ public class TargetChange : MonoBehaviour
 {
 
     public static int getClassRoom;
-    public static string getco;
-
-
-
+  
     void Start()
     {
         //DropdownClassRoom dropdownClassRoom = GameObject.Find("TextClassRoom").GetComponent<DropdownClassRoom>();
@@ -19,7 +16,7 @@ public class TargetChange : MonoBehaviour
 
         //getClassRoom = IndexNum.indexsNum.numIndex;
         Debug.Log(getClassRoom);
-        Debug.Log(getco);
+        
         switch (getClassRoom)
         {
             // 2-B2
@@ -1332,24 +1329,4 @@ public class TargetChange : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-
-    }
-
-    public void changesss()
-    {
-
-
-
-
-
-
-
-
-
-
-    }
 }
