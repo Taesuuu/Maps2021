@@ -43,7 +43,7 @@ public class menuscript : MonoBehaviour
     public void menuup()
     {
         menus.SetActive(true);
-        backimg.SetActive(false);
+       backimg.SetActive(false);
     }
     public void menudown()
     {
@@ -1453,41 +1453,41 @@ public class menuscript : MonoBehaviour
     public void pop1()
     {
         popst[0].SetActive(true);
-        backimg.SetActive(false);
+     //   backimg.SetActive(false);
     }
     public void pop2()
     {
         popst[1].SetActive(true);
-        backimg.SetActive(false);
+      //  backimg.SetActive(false);
     }
     public void pop3()
     {
         popst[2].SetActive(true);
-        backimg.SetActive(false);
+      //  backimg.SetActive(false);
     }
     public void pop4()
     {
         popst[3].SetActive(true);
-        backimg.SetActive(false);
+      //  backimg.SetActive(false);
     }
     public void pop5()
     {
         popst[4].SetActive(true);
-        backimg.SetActive(false);
+       // backimg.SetActive(false);
     }
     public void pop6()
     {
         popst[5].SetActive(true);
-        backimg.SetActive(false);
+       // backimg.SetActive(false);
     }
     public void pop7()
     {
         popst[6].SetActive(true);
-        backimg.SetActive(false);
+       // backimg.SetActive(false);
     }
     public void pop8()
     {
         popst[7].SetActive(true);
-        backimg.SetActive(false);
+        //backimg.SetActive(false);
     }
 }
