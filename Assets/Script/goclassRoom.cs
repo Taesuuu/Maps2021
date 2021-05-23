@@ -20,6 +20,10 @@ public class goclassRoom : MonoBehaviour
         
     }
 
+    public void maingo()
+    {
+        SceneManager.LoadScene("newMain");
+    }
 
     public void goClassRoom()
     {

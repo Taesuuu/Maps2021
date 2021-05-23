@@ -1102,46 +1102,46 @@ public class menuscript : MonoBehaviour
         // 6-6
         if (onechose == 6 && twochose == 6)
         {
-            for (int i = 0; i < 17; i++)
+            for (int i = 0; i < 18; i++)
             {
                 classroom[i].SetActive(true);
             }
             classNum[0].text = "6601";
-            classroom[0].gameObject.tag = "6301";
+            classroom[0].gameObject.tag = "6601";
             classNum[1].text = "6602";
-            classroom[1].gameObject.tag = "6302";
+            classroom[1].gameObject.tag = "6602";
             classNum[2].text = "6603";
-            classroom[2].gameObject.tag = "6303";
+            classroom[2].gameObject.tag = "6603";
             classNum[3].text = "6604";
-            classroom[3].gameObject.tag = "6304";
+            classroom[3].gameObject.tag = "6604";
             classNum[4].text = "6605";
-            classroom[4].gameObject.tag = "6305";
+            classroom[4].gameObject.tag = "6605";
             classNum[5].text = "6606";
-            classroom[5].gameObject.tag = "6306";
+            classroom[5].gameObject.tag = "6606";
             classNum[6].text = "6607";
-            classroom[6].gameObject.tag = "6307";
+            classroom[6].gameObject.tag = "6607";
             classNum[7].text = "6608";
-            classroom[7].gameObject.tag = "6308";
+            classroom[7].gameObject.tag = "6608";
             classNum[8].text = "6609";
-            classroom[8].gameObject.tag = "6309";
+            classroom[8].gameObject.tag = "6609";
             classNum[9].text = "6610";
-            classroom[9].gameObject.tag = "6310";
+            classroom[9].gameObject.tag = "6610";
             classNum[10].text = "6611";
-            classroom[10].gameObject.tag = "6311";
-            classNum[10].text = "6612";
-            classroom[10].gameObject.tag = "6312";
-            classNum[10].text = "6613";
-            classroom[10].gameObject.tag = "6313";
-            classNum[10].text = "6614";
-            classroom[10].gameObject.tag = "6314";
-            classNum[10].text = "6615";
-            classroom[10].gameObject.tag = "6315";
-            classNum[10].text = "6616";
-            classroom[10].gameObject.tag = "6316";
-            classNum[10].text = "6617";
-            classroom[10].gameObject.tag = "6317";
-            classNum[10].text = "6618";
-            classroom[10].gameObject.tag = "6318";
+            classroom[10].gameObject.tag = "6611";
+            classNum[11].text = "6612";
+            classroom[11].gameObject.tag = "6612";
+            classNum[12].text = "6613";
+            classroom[12].gameObject.tag = "6613";
+            classNum[13].text = "6614";
+            classroom[13].gameObject.tag = "6614";
+            classNum[14].text = "6615";
+            classroom[14].gameObject.tag = "6615";
+            classNum[15].text = "6616";
+            classroom[15].gameObject.tag = "6616";
+            classNum[16].text = "6617";
+            classroom[16].gameObject.tag = "6617";
+            classNum[17].text = "6618";
+            classroom[17].gameObject.tag = "6618";
         }
 
         // 1호고
