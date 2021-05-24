@@ -1832,7 +1832,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 133110608}
         m_TargetAssemblyTypeName: goMain, Assembly-CSharp
         m_MethodName: maingo
         m_Mode: 1
