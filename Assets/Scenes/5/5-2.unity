@@ -2676,6 +2676,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1005859813}
     m_Modifications:
+    - target: {fileID: 2632520093559171249, guid: bdeab6adda838c640b4bd708f454625b, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 8400000, guid: 30c8bffb3cd8d1c419186b8262b267f9, type: 2}
+    - target: {fileID: 2632520094231809438, guid: bdeab6adda838c640b4bd708f454625b, type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 30c8bffb3cd8d1c419186b8262b267f9, type: 2}
     - target: {fileID: 2632520094231809438, guid: bdeab6adda838c640b4bd708f454625b, type: 3}
       propertyPath: orthographic size
       value: 70
