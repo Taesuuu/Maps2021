@@ -1356,19 +1356,19 @@ public class menuscript : MonoBehaviour
                 classroom[i].SetActive(true);
             }
             classNum[0].text = "3301";
-            classroom[0].gameObject.tag = "3201";
+            classroom[0].gameObject.tag = "3301";
             classNum[1].text = "3302";
-            classroom[1].gameObject.tag = "3202";
+            classroom[1].gameObject.tag = "3302";
             classNum[2].text = "3303";
-            classroom[2].gameObject.tag = "3203";
+            classroom[2].gameObject.tag = "3303";
             classNum[3].text = "3304";
-            classroom[3].gameObject.tag = "3204";
+            classroom[3].gameObject.tag = "3304";
             classNum[4].text = "3305";
-            classroom[4].gameObject.tag = "3205";
+            classroom[4].gameObject.tag = "3305";
             classNum[5].text = "3306";
-            classroom[5].gameObject.tag = "3206";
+            classroom[5].gameObject.tag = "3306";
             classNum[6].text = "3307";
-            classroom[6].gameObject.tag = "3207";
+            classroom[6].gameObject.tag = "3307";
             classNum[7].text = "3308";
             classroom[7].gameObject.tag = "3308";
         }
