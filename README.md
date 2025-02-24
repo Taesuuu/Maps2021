@@ -28,20 +28,18 @@
 ### 1. **유한대학교 지도**
 각 건물 클릭 시, 건물 정보 확인 가능
 ![1](https://github.com/user-attachments/assets/296da36d-cb2a-43e7-ad0d-5ff4e066f5e1)
+![건물 소개](https://github.com/user-attachments/assets/1dfe97bf-b766-4786-a9a9-ca04652f569b)
 
-
-![건물 정보](https://prod-files-secure.s3.us-west-2.amazonaws.com/c929a78f-8725-41fb-8c23-b40344b7f193/7d4dfcac-4a3b-460d-ad87-8fc9d4af5360/image.png)
 
 ### 2. **도착지(강의실) 지정**
 사용자가 원하는 강의실 정보(건물, 층, 호수) 선택
 강의실 확인창에서 '강의실로 이동' 버튼 클릭 시, 길안내 시작
-![건물, 층, 강의실 호 선택](https://prod-files-secure.s3.us-west-2.amazonaws.com/c929a78f-8725-41fb-8c23-b40344b7f193/bb09c03e-5547-4f0e-9eab-ffa2844fc998/image.png)
+![강의실 정보](https://github.com/user-attachments/assets/244f1e63-db74-4d4a-8cca-c997d7f291e0)
+![확인창](https://github.com/user-attachments/assets/6a5576b6-63af-4039-8375-ad1246a533ca)
 
-![강의실 확인 창](https://prod-files-secure.s3.us-west-2.amazonaws.com/c929a78f-8725-41fb-8c23-b40344b7f193/b169da04-93a8-429f-834d-a597c8c7f76b/image.png)
 
 ### 2. **도착지(강의실) 길안내**
 외부지도에서 GPS 기반 사용자의 현위치 표현하며 사용자가 원하는 건물까지 길안내
 건물에 도착하면 내부지도 화면으로 전환되며 강의실까지 길 안내
-![외부 지도](https://prod-files-secure.s3.us-west-2.amazonaws.com/c929a78f-8725-41fb-8c23-b40344b7f193/58731794-6483-45a7-9c57-ce1f2eba440c/image.png)
-
-![내부 지도](https://prod-files-secure.s3.us-west-2.amazonaws.com/c929a78f-8725-41fb-8c23-b40344b7f193/ea984e96-2a6c-48b4-a7f4-596fcea459f0/image.png)
+![외부](https://github.com/user-attachments/assets/185c3d09-4bea-4f52-a9ac-ee22d92a3b19)
+![내부](https://github.com/user-attachments/assets/e6ea1cb7-cb33-4423-913e-371daca9bc6e)
