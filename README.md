@@ -27,7 +27,8 @@
 
 ### 1. **유한대학교 지도**
 각 건물 클릭 시, 건물 정보 확인 가능
-![유한대학교 지도](attachment:4c69b865-a075-403e-901c-c73d4f985604:f5791f91-b908-4c7a-afe0-1738fc710dc0.png)
+![Uploading 1.png…]()
+
 ![건물 정보](https://prod-files-secure.s3.us-west-2.amazonaws.com/c929a78f-8725-41fb-8c23-b40344b7f193/7d4dfcac-4a3b-460d-ad87-8fc9d4af5360/image.png)
 
 ### 2. **도착지(강의실) 지정**
